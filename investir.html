@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Investissement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .vip-plan {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .vip-plan h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+        .vip-plan p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        .vip-plan .details {
+            margin: 10px 0;
+        }
+        .vip-plan .details div {
+            margin-bottom: 5px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choisissez un Plan d'Investissement</h1>
+        
+        <!-- Plan VIP 1 -->
+        <div class="vip-plan">
+            <h2>VIP 1</h2>
+            <p>Montant: 7.500 XOF</p>
+            <div class="details">
+                <div>Revenus par heure: 700 XOF</div>
+                <div>Validation: 24h/24</div>
+                <div>Cycle: 2 jours</div>
+                <div>Revenus total: 33.600 XOF</div>
+            </div>
+            <div class="button-container">
+                <button onclick="submitInvestment(7500)">Choisir</button>
+            </div>
+        </div>
+        
+        <!-- Plan VIP 2 -->
+        <div class="vip-plan">
+            <h2>VIP 2</h2>
+            <p>Montant: 16.000 XOF</p>
+            <div class="details">
+                <div>Revenus par heure: 400 XOF</div>
+                <div>Validation: 24h/24</div>
+                <div>Cycle: 5 jours</div>
+                <div>Revenus total: 48.000 XOF</div>
+            </div>
+            <div class="button-container">
+                <button onclick="submitInvestment(16000)">Choisir</button>
+            </div>
+        </div>
+
+        <!-- Plan VIP 3 -->
+        <div class="vip-plan">
+            <h2>VIP 3</h2>
+            <p>Montant: 25.000 XOF</p>
+            <div class="details">
+                <div>Revenus par heure: 300 XOF</div>
+                <div>Validation: 24h/24</div>
+                <div>Cycle: 9 jours</div>
+                <div>Revenus total: 64.800 XOF</div>
+            </div>
+            <div class="button-container">
+                <button onclick="submitInvestment(25000)">Choisir</button>
+            </div>
+        </div>
+
+        <!-- Plan VIP 4 -->
+        <div class="vip-plan">
+            <h2>VIP 4</h2>
+            <p>Montant: 35.000 XOF</p>
+            <div class="details">
+                <div>Revenus par heure: 200 XOF</div>
+                <div>Validation: 24h/24</div>
+                <div>Cycle: 15 jours</div>
+                <div>Revenus total: 72.000 XOF</div>
+            </div>
+            <div class="button-container">
+                <button onclick="submitInvestment(35000)">Choisir</button>
+            </div>
+        </div>
+
+        <!-- Plan VIP 5 -->
+        <div class="vip-plan">
+            <h2>VIP 5</h2>
+            <p>Montant: 45.000 XOF</p>
+            <div class="details">
+                <div>Revenus par heure: 100 XOF</div>
+                <div>Validation: 24h/24</div>
+                <div>Cycle: 50 jours</div>
+                <div>Revenus total: 120.000 XOF</div>
+            </div>
+            <div class="button-container">
+                <button onclick="submitInvestment(45000)">Choisir</button>
+            </div>
+        </div>
+
+        <!-- Plan VIP 6 -->
+        <div class="vip-plan">
+            <h2>VIP 6</h2>
+            <p>Montant: 50.000 XOF</p>
+            <div class="details">
+                <div>Revenus par heure: 50 XOF</div>
+                <div>Validation: 24h/24</div>
+                <div>Cycle: 125 jours</div>
+                <div>Revenus total: 150.000 XOF</div>
+            </div>
+            <div class="button-container">
+                <button onclick="submitInvestment(50000)">Choisir</button>
+            </div>
+        </div>
+
+        <!-- Plan VIP 7 -->
+        <div class="vip-plan">
+            <h2>VIP 7</h2>
+            <p>Montant: 80.000 XOF</p>
+            <div class="details">
+                <div>Revenus par heure: 1.000 XOF</div>
+                <div>Validation: 24h/24</div>
+                <div>Cycle: 8 jours</div>
+                <div>Revenus total: 192.000 XOF</div>
+            </div>
+            <div class="button-container">
+                <button onclick="submitInvestment(80000)">Choisir</button>
+            </div>
+        </div>
+
+        <!-- Plan VIP 8 -->
+        <div class="vip-plan">
+            <h2>VIP 8</h2>
+            <p>Montant: 100.000 XOF</p>
+            <div class="details">
+                <div>Revenus par heure: 2.000 XOF</div>
+                <div>Validation: 24h/24</div>
+                <div>Cycle: 5 jours</div>
+                <div>Revenus total: 240.000 XOF</div>
+            </div>
+            <div class="button-container">
+                <button onclick="submitInvestment(100000)">Choisir</button>
+            </div>
+        </div>
+
+        <!-- Plans VIP 9-13 -->
+        <div class="vip-plan">
+            <h2>VIP 9 à VIP 13</h2>
+            <p>Bientôt disponible</p>
+        </div>
+        
+        <!-- Message d'erreur -->
+        <div id="error-message" class="error-message" style="display:none;">
+            Solde insuffisant !
+        </div>
+    </div>
+
+    <script>
+        function submitInvestment(amount) {
+            const userBalance = 100000; // Exemple de solde utilisateur
+            if (userBalance < amount) {
+                document.getElementById('error-message').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'none';
+                // Logique pour traiter l'investissement ici
+                alert(`Investissement de ${amount} XOF solde insuffisant.`);
+            }
+        }
+    </script>
+</body>
+</html>
